@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <h3 class="text-center custom-font">Listado de peliculas</h3>
+    <div class="row bg-dark text-light text-center">
+        <div class="col-sm border d-none">
+            <h3 class="custom-font-headers">Id</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3 class="custom-font-headers">Nombre</h3>
+        </div>
+        <div class="col-sm-2 border">
+            <h3 class="custom-font-headers">Categoría</h3>
+        </div>
+        <div class="col-sm-2 border">
+            <h3 class="custom-font-headers">Estreno</h3>
+        </div>
+        <div class="col-sm-2 border">
+            <h3 class="custom-font-headers">Público</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3 class="custom-font-headers">Foto</h3>
+        </div>
+    </div>
+<!--     <div *ngFor="let item of listado" class="row custom-pointer" (click)="seleccionDeFila(item)"
+        [class.fila-seleccionada]="filaSeleccionada != null && item.id === filaSeleccionada.id">
+        <div class="col-sm border d-none">
+            {{item.id}}
+        </div>
+        <div class="col-sm-3 border custom-font-data">
+            {{item.nombre}}
+        </div>
+        <div class="col-sm-2 border custom-font-data">
+            {{obtenerTipoPeliculaString(item)}}
+        </div>
+        <div class="col-sm-2 border custom-font-data">
+            {{obtenerFechaString(item)}}
+        </div>
+        <div class="col-sm-2 border custom-font-data text-right">
+            {{item.cantidadPublico}}
+        </div>
+        <div class="col-sm-3 border custom-font-data">
+            <img [src]="item.rutaFoto" alt="Imagen no disponible">
+        </div> -->
+        <div class="row custom-pointer" (click)="seleccionDeFila({id: 1, nombre: 'Pelicula 1', tipo: 1, fecha: '2022-04-27', cantidadPublico: 100, rutaFoto: 'https://via.placeholder.com/150'})" [class.fila-seleccionada]="filaSeleccionada != null && filaSeleccionada.id === 1">
+            <div class="col-sm border d-none">
+                1
+            </div>
+            <div class="col-sm-3 border custom-font-data">
+                Pelicula 1
+            </div>
+            <div class="col-sm-2 border custom-font-data">
+                Tipo 1
+            </div>
+            <div class="col-sm-2 border custom-font-data">
+                2022-04-27
+            </div>
+            <div class="col-sm-2 border custom-font-data text-right">
+                100
+            </div>
+            <div class="col-sm-3 border custom-font-data">
+                <img src="https://via.placeholder.com/150" alt="Imagen no disponible">
+            </div>
+        </div>
+        
+        <div class="row custom-pointer" (click)="seleccionDeFila({id: 2, nombre: 'Pelicula 2', tipo: 2, fecha: '2022-05-01', cantidadPublico: 50, rutaFoto: 'https://via.placeholder.com/150'})" [class.fila-seleccionada]="filaSeleccionada != null && filaSeleccionada.id === 2">
+            <div class="col-sm border d-none">
+                2
+            </div>
+            <div class="col-sm-3 border custom-font-data">
+                Pelicula 2
+            </div>
+            <div class="col-sm-2 border custom-font-data">
+                Tipo 2
+            </div>
+            <div class="col-sm-2 border custom-font-data">
+                2022-05-01
+            </div>
+            <div class="col-sm-2 border custom-font-data text-right">
+                50
+            </div>
+            <div class="col-sm-3 border custom-font-data">
+                <img src="https://via.placeholder.com/150" alt="Imagen no disponible">
+            </div>
+        </div>
+        
+</div>
